@@ -5,6 +5,9 @@ import 'package:widgets_app/config/menu/menu_items.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  // static para no crear una instancia de la clase, con esto tenemos acceso a esa propiedad
+  static const String name = 'home_screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +54,11 @@ class _CustomListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => const HomeScreen(),
+        //   ),
+        // );
         //Navigator.pushNamed(context, menuItem.link);
         context.push(menuItem.link);
       },
