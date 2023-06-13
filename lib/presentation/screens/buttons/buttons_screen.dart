@@ -40,7 +40,7 @@ class _ButtonsView extends StatelessWidget {
           spacing: 10,
           alignment: WrapAlignment.center,
           children: [
-            ElevatedButton(onPressed: () {}, child: Text('Elevated Button')),
+            ElevatedButton(onPressed: () {}, child: const Text('Elevated Button')),
 
             const ElevatedButton(onPressed: null, child: Text('Elevated Disabled')),
 
@@ -63,7 +63,7 @@ class _ButtonsView extends StatelessWidget {
 
             OutlinedButton(
               onPressed: () {},
-              child: Text('Outline'),
+              child: const Text('Outline'),
             ),
 
             OutlinedButton.icon(
@@ -82,8 +82,6 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.android_rounded),
               label: const Text('Text Icon'),
             ),
-
-            // TODO custom button
 
             const CustomButton(),
 
