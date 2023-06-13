@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter + Material 3'),
       ),
-      body: _HomeView(),
+      body: const _HomeView(),
     );
   }
 }
@@ -50,7 +51,8 @@ class _CustomListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        Navigator.pushNamed(context, menuItem.link);
+        //Navigator.pushNamed(context, menuItem.link);
+        context.push(menuItem.link);
       },
     );
   }
