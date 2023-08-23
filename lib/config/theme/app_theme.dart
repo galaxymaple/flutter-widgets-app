@@ -39,4 +39,16 @@ class AppTheme {
     ),
   );
 
+  // Nuevo método copyWith para crear una nueva instancia de AppTheme con los valores por defecto
+  // copyWith método para copiar clases, la instancia de la clase
+  AppTheme copyWith({
+    // copyWith recibe lo mismo que está en el constructor, la única diferencia es que son opcionales '?'
+    int? selectedColor,
+    bool? isDarkmode,
+  }) => AppTheme(
+    // Si se establece un valor, se establece ese valor, de lo contrario se usa el valor por defecto
+    selectedColor: selectedColor ?? this.selectedColor,
+    isDarkmode: isDarkmode ?? this.isDarkmode,
+  );
+
 }
